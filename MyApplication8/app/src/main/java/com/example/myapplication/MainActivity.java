@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = (Button)findViewById(R.id.btn19);
+        Button button = (Button)findViewById(R.id.btn111);
         button.setOnClickListener(the_bmi);
     }
     private View.OnClickListener the_bmi = new View.OnClickListener() {
@@ -32,8 +32,18 @@ public class MainActivity extends AppCompatActivity {
             double weight = Double.parseDouble(findweight.getText().toString());
             // computing bmi
             double bmi = weight / (height * height);
+            //answer
+            TextView findsuggest = (TextView)findViewById(R.id.textV3);
 
 
+            //p.s
+          /*  TextView findps = (TextView)findViewById(R.id.textV4);
+            if (bmi < 18)
+                findps.setText(R.string.advice_light);
+            else if (bmi > 24)
+                findps.setText(R.string.advice_heavy);
+            else
+                findps.setText(R.string.advice_average);*/
         }
     };
 }
